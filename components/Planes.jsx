@@ -161,7 +161,7 @@ const Planes = () => {
                                             })
                                         }
                                     </ul>
-                                    <button className="bg-accent text-white mx-auto flex items-center justify-center p-5 font-bold rounded-lg mt-5 w-[200px]">Get Started</button>
+                                    <button className="bg-accent text-white mx-auto flex items-center justify-center p-5 font-bold rounded-lg mt-5 w-[100%]">Get Started</button>
                                     {
                                         plan.id == 3 ? <span className="text-2xl font-bold uppercase bg-accent text-secondary w-[200px] px-4 py-2 rounded-lg absolute top-[-30px] right-[27%] hidden lg:block">Recommended</span> : ""
                                     }

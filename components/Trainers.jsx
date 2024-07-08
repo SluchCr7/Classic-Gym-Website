@@ -106,7 +106,7 @@ const Trainers = () => {
                       </div>
                     </div>
                 </motion.div>
-                <motion.div variants={fadein("down", 0)} initial={"hidden"} whileInView={"show"} viewport={{ once: false, amount: 0.3 }} className='contact grid grid-cols-2 xl:grid-cols-3 my-9 gap-14'>
+                <motion.div variants={fadein("down", 0)} initial={"hidden"} whileInView={"show"} viewport={{ once: false, amount: 0.3 }} className='contact grid grid-cols-1 xl:grid-cols-3 my-9 gap-14'>
                   <div className='way flex flex-col items-center gap-3'>
                     <span className='icon text-2xl text-primary bg-secondary w-[60px] h-[60px] p-4 rounded-full flex items-center justify-center'><CiPhone/></span>
                     <span className='value text-accent font-extrabold text-lg'>{index.phone}</span>

@@ -91,7 +91,7 @@ const Stats = () => {
                     </div>
                     <div className='flex flex-col items-center mt-2 gap-3'>
                         <div className='icon text-4xl text-secondary'>{stat.icon}</div>
-                        <p className='text-secondary font-bold'>{stat.name}</p>
+                        <p className='text-secondary font-bold text-sm xl:text-2xl'>{stat.name}</p>
                     </div>
                 </motion.div>
             ))

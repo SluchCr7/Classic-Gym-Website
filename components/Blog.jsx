@@ -63,7 +63,7 @@ const Blog = () => {
             <div className="flex flex-col items-center gap-8">
                 <motion.div variants={fadeIn("up", 0.4)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }} className='intro flex flex-col items-center gap-2'>
                     <h1 className='text-3xl font-bold text-secondary'>Blog</h1>
-                    <p className='text-xl text-accent'>View our latest news and updates here.</p>
+                    <p className='text-xl text-accent text-center'>View our latest news and updates here.</p>
                 </motion.div>
                 <motion.div variants={fadeIn("down", 0.4)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }} className="blogs grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {

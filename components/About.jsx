@@ -39,7 +39,7 @@ const About = () => {
                     info.map((item, index) => (
                     <motion.div variants={fadein(item.to, 0.5)} initial="hidden" whileInView={"show"} viewport={{ once: false, amount: 0.3 }} key={index} className='flex flex-col items-center justify-center gap-3 border-[1px] border-[#232329] p-5 rounded-lg'>
                             <div className='icon flex items-center justify-center bg-secondary p-5 rounded-full'>{item.icon}</div>
-                            <h1 className='text-2xl font-black text-accent'>{item.title}</h1>
+                            <h1 className='text-2xl font-black text-accent text-center'>{item.title}</h1>
                             <p className='text-secondary text-sm text-center'>{item.description}</p>
                     </motion.div>
                     ))
