@@ -146,14 +146,14 @@ const Planes = () => {
                     {
                         Planes.map((plan) => {
                             return (
-                                <motion.div variants={fadein("down", 0.4)} initial={"hidden"} whileInView={"show"} viewport={{ once: false, amount: 0.3 }} className={`flex flex-col items-start gap-8 p-4 rounded-lg bg-transparent border-accent border-[1px] relative w-[100%] ${plan.id === 3 ? "scale-105 shadow-[0_0_10px_0_#fca311]" : ''} `}>
+                                <motion.div variants={fadein("down", 0.4)} initial={"hidden"} whileInView={"show"} viewport={{ once: false, amount: 0.3 }} className={`flex flex-col items-start gap-8 p-4 rounded-lg bg-transparent border-accent border-[1px] relative w-[100%] ${plan.id === 3 ? "scale-105 shadow-[0_0_10px_0_#fca311]" : ''} `} key={plan.id}>
                                     <h1 className="text-3xl font-bold text-accent">{plan.name}</h1>
                                     <p className="text-2xl font-bold text-primary"><span className="text-5xl font-extrabold text-[#fca311]">${plan.price}</span>/ month</p>
                                     <ul className="flex flex-col gap-5">
                                         {
                                             plan.features.map(feature => {
                                                 return (
-                                                    <li className="flex items-center gap-2">
+                                                    <li className="flex items-center gap-2" key={feature.name}>
                                                         <span>{feature.icon}</span>
                                                         <p>{feature.name}</p>
                                                     </li>
