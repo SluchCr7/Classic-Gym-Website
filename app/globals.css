@@ -2,32 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body{
+    @apply bg-primary text-white font-primary;
+  }
+  html{
+    scroll-behavior: smooth;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.active{
+  @apply border-b-[2px] border-accent text-accent font-bold;
+}
+.text_outline{
+  -webkit-text-stroke: 1px #000;
+}
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  @apply bg-primary
+}
+::-webkit-scrollbar-thumb{
+  @apply bg-accent
+}
+::selection{
+  @apply bg-accent text-primary
+}
+.icons{
+  display: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* image hover */
+.image:hover .icons{
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .image:hover .icons{
+    width: 100%;
   }
 }
