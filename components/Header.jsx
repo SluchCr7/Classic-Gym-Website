@@ -8,13 +8,6 @@ const Header = () => {
     const pathname = usePathname()
     console.log(pathname)
     const [header, setheader] = React.useState(false)
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 100) {
-            setheader(true)
-        } else {
-            setheader(false)
-        }
-    })
   return (
       <div className={`bg-[#000] w-full flex flex-row items-center justify-between p-5 fixed top-0 z-[999]`}>
           <div className='flex flex-row items-center justify-between mx-auto container'>
